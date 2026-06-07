@@ -1,5 +1,5 @@
-name : First Workflow
-on : [push]
+name: First Workflow
+on: [push]
 
 jobs:
   run-shell-commands:
@@ -10,4 +10,4 @@ jobs:
       - name: Multiline Command
         run: |
           node --version
-          npm -v
+          npm --version
