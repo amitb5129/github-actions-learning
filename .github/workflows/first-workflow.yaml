@@ -11,3 +11,18 @@ jobs:
         run: |
           node --version
           npm --version
+
+  parallel-jobs-macos:
+    runs-on: macos-latest
+    steps:
+      - name: View SH Version
+        run: sw_vers
+
+  dependant-job:
+    runs-on: windows-latest
+    needs: run-shell-commands
+    steps:
+      - name: View Windows Version
+        run: winver
+      - name : Error Command
+        run: exit 1
